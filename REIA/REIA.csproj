@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{84C5B39B-3798-4B7F-BD06-39F796E27274}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>REIA</RootNamespace>
+    <AssemblyName>REIA</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\frmAddBarangay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAddBarangay.Designer.cs">
+      <DependentUpon>frmAddBarangay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAddEconomicCrisis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAddEconomicCrisis.Designer.cs">
+      <DependentUpon>frmAddEconomicCrisis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAddEconomicRecommendation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAddEconomicRecommendation.Designer.cs">
+      <DependentUpon>frmAddEconomicRecommendation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAddEntrepreneurialActivities.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAddEntrepreneurialActivities.Designer.cs">
+      <DependentUpon>frmAddEntrepreneurialActivities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAddHealthCrisis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAddHealthCrisis.Designer.cs">
+      <DependentUpon>frmAddHealthCrisis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAddHealthRecommendation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAddHealthRecommendation.Designer.cs">
+      <DependentUpon>frmAddHealthRecommendation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAddMunicipality.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAddMunicipality.Designer.cs">
+      <DependentUpon>frmAddMunicipality.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAddCluster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAddCluster.Designer.cs">
+      <DependentUpon>frmAddCluster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAddOtherSources.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAddOtherSources.Designer.cs">
+      <DependentUpon>frmAddOtherSources.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAddReason.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAddReason.Designer.cs">
+      <DependentUpon>frmAddReason.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAddSalariesWages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAddSalariesWages.Designer.cs">
+      <DependentUpon>frmAddSalariesWages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmEconomicSituationSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmEconomicSituationSummary.Designer.cs">
+      <DependentUpon>frmEconomicSituationSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmExpenditureSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmExpenditureSummary.Designer.cs">
+      <DependentUpon>frmExpenditureSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmExperiencedHungerSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmExperiencedHungerSummary.Designer.cs">
+      <DependentUpon>frmExperiencedHungerSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFamilyIncomeSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFamilyIncomeSummary.Designer.cs">
+      <DependentUpon>frmFamilyIncomeSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmIncomeSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmIncomeSummary.Designer.cs">
+      <DependentUpon>frmIncomeSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmProfileSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmProfileSummary.Designer.cs">
+      <DependentUpon>frmProfileSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRespondentList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRespondentList.Designer.cs">
+      <DependentUpon>frmRespondentList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSavingsSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSavingsSummary.Designer.cs">
+      <DependentUpon>frmSavingsSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSettings.Designer.cs">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSummary.Designer.cs">
+      <DependentUpon>frmSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSurveyQuestionnaire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSurveyQuestionnaire.Designer.cs">
+      <DependentUpon>frmSurveyQuestionnaire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmVerificationDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmVerificationDelete.Designer.cs">
+      <DependentUpon>frmVerificationDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\frmAddBarangay.resx">
+      <DependentUpon>frmAddBarangay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAddEconomicCrisis.resx">
+      <DependentUpon>frmAddEconomicCrisis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAddEconomicRecommendation.resx">
+      <DependentUpon>frmAddEconomicRecommendation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAddEntrepreneurialActivities.resx">
+      <DependentUpon>frmAddEntrepreneurialActivities.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAddHealthCrisis.resx">
+      <DependentUpon>frmAddHealthCrisis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAddHealthRecommendation.resx">
+      <DependentUpon>frmAddHealthRecommendation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAddMunicipality.resx">
+      <DependentUpon>frmAddMunicipality.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAddCluster.resx">
+      <DependentUpon>frmAddCluster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAddOtherSources.resx">
+      <DependentUpon>frmAddOtherSources.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAddReason.resx">
+      <DependentUpon>frmAddReason.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAddSalariesWages.resx">
+      <DependentUpon>frmAddSalariesWages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmEconomicSituationSummary.resx">
+      <DependentUpon>frmEconomicSituationSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmExpenditureSummary.resx">
+      <DependentUpon>frmExpenditureSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmExperiencedHungerSummary.resx">
+      <DependentUpon>frmExperiencedHungerSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFamilyIncomeSummary.resx">
+      <DependentUpon>frmFamilyIncomeSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmIncomeSummary.resx">
+      <DependentUpon>frmIncomeSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmProfileSummary.resx">
+      <DependentUpon>frmProfileSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmRespondentList.resx">
+      <DependentUpon>frmRespondentList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSavingsSummary.resx">
+      <DependentUpon>frmSavingsSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSettings.resx">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSummary.resx">
+      <DependentUpon>frmSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSurveyQuestionnaire.resx">
+      <DependentUpon>frmSurveyQuestionnaire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmVerificationDelete.resx">
+      <DependentUpon>frmVerificationDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\REIA.Models\REIA.Models.csproj">
+      <Project>{7b9725d5-4635-406d-a661-ae61c60418d7}</Project>
+      <Name>REIA.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\REIA.Services\REIA.Services.csproj">
+      <Project>{00931d94-42e5-4cc8-b520-2239eb913aba}</Project>
+      <Name>REIA.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>

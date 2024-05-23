@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7B9725D5-4635-406D-A661-AE61C60418D7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>REIA.Models</RootNamespace>
+    <AssemblyName>REIA.Models</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.7.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataContext\DatabaseContext.cs" />
+    <Compile Include="Entities\AlcoholicBeverages.cs" />
+    <Compile Include="Entities\AllowanceOfStudent.cs" />
+    <Compile Include="Entities\Barangay.cs" />
+    <Compile Include="Entities\BreadsAndCereals.cs" />
+    <Compile Include="Entities\Clothing.cs" />
+    <Compile Include="Entities\Education.cs" />
+    <Compile Include="Entities\ElectricityGasFuels.cs" />
+    <Compile Include="Entities\FishAndSeafood.cs" />
+    <Compile Include="Entities\FoodProduct.cs" />
+    <Compile Include="Entities\Footwear.cs" />
+    <Compile Include="Entities\Fruit.cs" />
+    <Compile Include="Entities\Housing.cs" />
+    <Compile Include="Entities\InpatientMedicalServices.cs" />
+    <Compile Include="Entities\Insurance.cs" />
+    <Compile Include="Entities\Lists\Cluster.cs" />
+    <Compile Include="Entities\DomainObject.cs" />
+    <Compile Include="Entities\Lists\EconomicCrisisList.cs" />
+    <Compile Include="Entities\Lists\EconomicRecommendationList.cs" />
+    <Compile Include="Entities\Lists\EntrepreneurialActivitiesList.cs" />
+    <Compile Include="Entities\Lists\GoodsList.cs" />
+    <Compile Include="Entities\Lists\HealtCrisisList.cs" />
+    <Compile Include="Entities\Lists\HealthRecommendationList.cs" />
+    <Compile Include="Entities\Lists\OtherSourcesList.cs" />
+    <Compile Include="Entities\Lists\ReasonList.cs" />
+    <Compile Include="Entities\Lists\SalariesWagesList.cs" />
+    <Compile Include="Entities\Lists\ServicesList.cs" />
+    <Compile Include="Entities\Meat.cs" />
+    <Compile Include="Entities\MedicalProducts.cs" />
+    <Compile Include="Entities\MilkCheeseEggs.cs" />
+    <Compile Include="Entities\MineralwaterSoftdrinkJuice.cs" />
+    <Compile Include="Entities\Municipality.cs" />
+    <Compile Include="Entities\NewspaperBookStationary.cs" />
+    <Compile Include="Entities\NonAlcoholicBeverages.cs" />
+    <Compile Include="Entities\OilsAndFats.cs" />
+    <Compile Include="Entities\OtherEducationalExpense.cs" />
+    <Compile Include="Entities\OutpatientMedicalServices.cs" />
+    <Compile Include="Entities\PersonalCare.cs" />
+    <Compile Include="Entities\PersonalEffect.cs" />
+    <Compile Include="Entities\PersonalTransport.cs" />
+    <Compile Include="Entities\PostalServices.cs" />
+    <Compile Include="Entities\RecreationalItemsEquipment.cs" />
+    <Compile Include="Entities\RecreationAndCulture.cs" />
+    <Compile Include="Entities\Respondent.cs" />
+    <Compile Include="Entities\RespondentEconomicCrisis.cs" />
+    <Compile Include="Entities\RespondentEntrepreneurialActivities.cs" />
+    <Compile Include="Entities\RespondentGoods.cs" />
+    <Compile Include="Entities\RespondentHealthCrisis.cs" />
+    <Compile Include="Entities\RespondentOtherSources.cs" />
+    <Compile Include="Entities\RespondentSalariesWages.cs" />
+    <Compile Include="Entities\RespondentServices.cs" />
+    <Compile Include="Entities\SugarJamHoneyChocolateConfectionary.cs" />
+    <Compile Include="Entities\Survey.cs" />
+    <Compile Include="Entities\TelephoneTelefaxServices.cs" />
+    <Compile Include="Entities\Tobacco.cs" />
+    <Compile Include="Entities\TransportServices.cs" />
+    <Compile Include="Entities\TuitionFee.cs" />
+    <Compile Include="Entities\Vegetable.cs" />
+    <Compile Include="Entities\WatersupplyMiscellaneous.cs" />
+    <Compile Include="Migrations\202008062231364_initial.cs" />
+    <Compile Include="Migrations\202008062231364_initial.designer.cs">
+      <DependentUpon>202008062231364_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202008081047221_AddMarchColumn.cs" />
+    <Compile Include="Migrations\202008081047221_AddMarchColumn.designer.cs">
+      <DependentUpon>202008081047221_AddMarchColumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202008201624024_AddRespondentColumn.cs" />
+    <Compile Include="Migrations\202008201624024_AddRespondentColumn.designer.cs">
+      <DependentUpon>202008201624024_AddRespondentColumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202008251219399_AddRespondentNewColumn.cs" />
+    <Compile Include="Migrations\202008251219399_AddRespondentNewColumn.designer.cs">
+      <DependentUpon>202008251219399_AddRespondentNewColumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202008062231364_initial.resx">
+      <DependentUpon>202008062231364_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008081047221_AddMarchColumn.resx">
+      <DependentUpon>202008081047221_AddMarchColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008201624024_AddRespondentColumn.resx">
+      <DependentUpon>202008201624024_AddRespondentColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008251219399_AddRespondentNewColumn.resx">
+      <DependentUpon>202008251219399_AddRespondentNewColumn.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
